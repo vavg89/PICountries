@@ -10,7 +10,7 @@ async function fetchAndSaveCountries() {
   try {
       // Hacer la solicitud Axios para obtener los datos de los países
       const response = await axios.get('http://localhost:5000/countries');
-      const count = response.data; // Suponiendo que la respuesta es un array de países
+      const count = response.data;
       const countriesArray = Object.values(count).map((c) => {
         return {
           cca3: c.cca3,
